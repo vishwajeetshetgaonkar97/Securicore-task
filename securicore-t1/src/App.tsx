@@ -59,20 +59,27 @@ function App() {
   }
 
   return (
-    <div className='min-h-screen bg-white text-black dark:bg-neutral-950 dark:text-white transition-colors duration-300'>
-      <div onClick={toggleDark} className="absolute flex justify-end p-2 px-2 py-2 rounded-md transition cursor-pointer bottom-0 ">
-            <img src={dark ? LightModeIcon : DarkModeIcon } alt="Google" className="w-7 h-7" />
+    <div className='min-h-screen w-screen overflow-x-clip bg-white text-black dark:bg-neutral-950 dark:text-white transition transition-colors duration-300'>
+      <div className="relative h-full w-screen bg-slate-950 opacity-0 dark:opacity-100">
+        <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
+        <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
       </div>
 
-      <div className="min-h-screen flex flex-col items-center justify-center">
-        <div className="relative w-full max-w-lg">
-          <div className="mx-5 border dark:border-white/40 border-black/20 shadow-lg rounded-lg lg:rounded-xl">
+      <div onClick={toggleDark} className="fixed flex justify-end p-2 px-2 py-2 rounded-md transition cursor-pointer top-0 right-0">
+        <img src={dark ? LightModeIcon : DarkModeIcon} alt="Google" className="w-7 h-7" />
+       
+      </div>
+
+
+      <div className="min-h-screen flex flex-col items-center justify-center transition">
+        <div className="relative w-full max-w-lg transition ">
+          <div className="mx-5 border dark:border-white/10 border-black/20 shadow-lg rounded-lg lg:rounded-xl backdrop-blur-lg">
             <div className='h-full w-full flex justify-center pt-6'>
-              <img className='w-auto h-16 object-cover' src={dark ? LogoDark : LogoWhite} alt="logo" />
+              <img className='w-auto h-16 object-cover' src={dark ? LogoDark : LogoWhite} alt="logo" /> 
             </div>
 
-            <div className="flex flex-col p-6">
-              <h3 className="text-xl font-semibold leading-6 tracking-tighter">Login</h3>
+            <div className="flex w-full flex-col p-6 items-center">
+              <h3 className="text-2xl font-bold uppercase opacity-80 dark:opacity-90">Login</h3>
               <p className="mt-1.5 text-sm font-medium text-gray-500 dark:text-white/60">
                 Welcome back, enter your credentials to continue.
               </p>
@@ -123,9 +130,9 @@ function App() {
                   />
 
                 </div>
-                {/* Password Strength Bar */}
+                
                 {password && (
-                  <div className="mt-2">
+                  <div className="mt-2 ">
                     <div className="h-1 w-full bg-gray-300 rounded-full">
                       <div className={`h-1 rounded-full transition-all duration-300 ${getStrengthColor()}`} style={{ width: `${passwordStrength === 'Low' ? 33 : passwordStrength === 'Medium' ? 66 : 100}%` }}></div>
                     </div>
@@ -145,9 +152,6 @@ function App() {
                 </div>
 
                 <div className="mt-4 flex items-center justify-end gap-x-2">
-                  {/* <a className="rounded-md px-4 py-2 text-sm border hover:bg-gray-100 dark:hover:bg-gray-800 transition" href="/register">
-                    Register
-                  </a> */}
                   <button type="submit" className="cursor-pointer rounded-md w-full px-4 py-2 text-sm font-semibold bg-blue-500 text-white hover:bg-blue-600 transition">
                     Log in
                   </button>
@@ -163,19 +167,19 @@ function App() {
               </div>
 
               <div className="mt-4 pb-4 flex flex-row gap-3 justify-center">
-                <button className="flex items-center justify-center gap-3 w-fit rounded-md px-4 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                <button className="flex items-center justify-center gap-3 w-fit rounded-md px-4 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition cursor-pointer">
                   <img src={GoogleIcon} alt="Google" className="w-7 h-7" />
                 </button>
 
-                <button className="flex items-center justify-center gap-3 w-fit rounded-md px-4 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                <button className="flex items-center justify-center gap-3 w-fit rounded-md px-4 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition cursor-pointer">
                   <img src={FacebookIcon} alt="Google" className="w-7 h-7" />
                 </button>
 
-                <button className="flex items-center justify-center gap-3 w-fit rounded-md px-4 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                <button className="flex items-center justify-center gap-3 w-fit rounded-md px-4 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition cursor-pointer">
                   <img src={GithubInIcon} alt="Google" className="w-7 h-7" />
                 </button>
 
-                <button className="flex items-center justify-center gap-3 w-fit rounded-md px-4 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                <button className="flex items-center justify-center gap-3 w-fit rounded-md px-4 py-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition cursor-pointer">
                   <img src={LinkedInIcon} alt="Google" className="w-7 h-7" />
                 </button>
 
