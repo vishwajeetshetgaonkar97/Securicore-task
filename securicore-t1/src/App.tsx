@@ -27,7 +27,7 @@ function App() {
     setDark(!dark);
   }
 
-  function evaluatePasswordStrength(pwd) {
+  function evaluatePasswordStrength(pwd: string) {
     let strength = 0;
     if (pwd.length >= 8) strength++;
     if (/[A-Z]/.test(pwd)) strength++;
@@ -39,7 +39,7 @@ function App() {
     return 'Strong';
   }
 
-  function handlePasswordChange(e) {
+  function handlePasswordChange(e: { target: { value: any } }) {
     const pwd = e.target.value;
     setPassword(pwd);
     setPasswordStrength(evaluatePasswordStrength(pwd));
