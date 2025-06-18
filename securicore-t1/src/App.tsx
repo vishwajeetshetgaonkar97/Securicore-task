@@ -39,11 +39,11 @@ function App() {
     return 'Strong';
   }
 
-  function handlePasswordChange(e: { target: { value: any } }) {
-    const pwd = e.target.value;
-    setPassword(pwd);
-    setPasswordStrength(evaluatePasswordStrength(pwd));
-  }
+function handlePasswordChange(e: React.ChangeEvent<HTMLInputElement>) {
+  const pwd = e.target.value;
+  setPassword(pwd);
+  setPasswordStrength(evaluatePasswordStrength(pwd));
+}
 
   function getStrengthColor() {
     switch (passwordStrength) {
