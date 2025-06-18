@@ -53,7 +53,7 @@ function handlePasswordChange(e: React.ChangeEvent<HTMLInputElement>) {
     }
   }
 
-    function handleSubmit(e) {
+    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     // You can add real authentication here
     if (username && password) {
