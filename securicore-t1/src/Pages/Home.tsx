@@ -1,6 +1,4 @@
 import React from 'react'
-import LightModeIcon from '../assets/light.png'
-import DarkModeIcon from '../assets/dark.png'
 import TopNav from '../Components/TopNav';
 
 interface HomeProps {
