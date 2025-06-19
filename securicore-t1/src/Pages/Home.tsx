@@ -77,6 +77,7 @@ export default function Home({ dark, toggleDark }: HomeProps) {
     };
 
     const handleAddNewUser = () => {
+          console.log('Button clicked!');
         setEditOrAddUser({ id: 0, name: '', email: '' });
         setIsAddingNewUser(true);
         setErrors({ name: '', email: '' });
@@ -90,7 +91,7 @@ export default function Home({ dark, toggleDark }: HomeProps) {
     };
 
     return (
-        <div className='min-h-screen w-screen overflow-x-clip bg-white text-black dark:bg-neutral-950 dark:text-white transition-colors duration-300'>
+        <div className='min-h-screen w-full overflow-x-clip bg-white text-black dark:bg-neutral-950 dark:text-white transition-colors duration-300'>
             <TopNav dark={dark} toggleDark={toggleDark} />
 
             <div className="relative h-full w-screen bg-slate-950 opacity-0 dark:opacity-100">
@@ -106,7 +107,7 @@ export default function Home({ dark, toggleDark }: HomeProps) {
                             Here are the list of Users in database
                         </p>
                     </div>
-                    <button onClick={handleAddNewUser} className='w-full sm:max-w-fit bg-yellow-400/75 dark:bg-yellow-400/70 hover:bg-yellow-500/90 text-white px-4 py-2 rounded-sm text-xs font-bold border border-gray-500/10 cursor-pointer uppercase'>
+                    <button type='button' onClick={handleAddNewUser} className='w-full sm:max-w-fit bg-yellow-400/75 dark:bg-yellow-400/70 hover:bg-yellow-500/90 text-white px-4 py-2 rounded-sm text-xs font-bold border border-gray-500/10 cursor-pointer uppercase relative'>
                         Add New user
                     </button>
                 </div>
@@ -198,7 +199,7 @@ export default function Home({ dark, toggleDark }: HomeProps) {
             {/* Edit/Add Modal */}
             {editOrAddUser && (
                 <div className="fixed inset-0 dark:bg-white/1 bg-black/20 flex justify-center items-center backdrop-blur-[2px]">
-                    <div className="bg-white dark:bg-neutral-900 p-4 rounded-lg min-w-[90%]  md:min-w-[450px]">
+                    <div className="bg-white dark:bg-neutral-900 p-4 rounded-lg min-w-[94%]  md:min-w-[450px]">
                         <h2 className="text-lg p-2 rounded-xs font-semibold mb-4 bg-black/3 dark:bg-white/3">
                             {isAddingNewUser ? 'Add New User' : 'Edit User'}
                         </h2>
