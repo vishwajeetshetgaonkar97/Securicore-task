@@ -55,9 +55,9 @@ export default function Home({ dark, toggleDark }: HomeProps) {
     };
 
     const isFormValid = () => {
-        return editOrAddUser?.name.trim() && 
-               editOrAddUser?.email.trim() && 
-               validateEmail(editOrAddUser.email);
+        return editOrAddUser?.name.trim() &&
+            editOrAddUser?.email.trim() &&
+            validateEmail(editOrAddUser.email);
     };
 
     const handleUpdateOrAddUser = () => {
@@ -99,62 +99,110 @@ export default function Home({ dark, toggleDark }: HomeProps) {
             </div>
 
             <div className="p-8">
-                <div className='flex justify-between items-end'>
-                    <div>
+                <div className='flex  justify-between items-end gap-2 sm:gap-0 flex-col sm:flex-row'>
+                    <div className='w-full'>
                         <h3 className="text-2xl font-bold uppercase opacity-80 dark:opacity-90">Welcome!</h3>
                         <p className="mt-1 text-sm font-medium text-gray-500 dark:text-white/60">
                             Here are the list of Users in database
                         </p>
                     </div>
-                    <button onClick={handleAddNewUser} className='bg-yellow-400/75 dark:bg-yellow-400/70 hover:bg-yellow-500/90 text-white px-4 py-2 rounded-sm text-xs font-bold border border-gray-500/10 cursor-pointer uppercase'>
+                    <button onClick={handleAddNewUser} className='w-full sm:max-w-fit bg-yellow-400/75 dark:bg-yellow-400/70 hover:bg-yellow-500/90 text-white px-4 py-2 rounded-sm text-xs font-bold border border-gray-500/10 cursor-pointer uppercase'>
                         Add New user
                     </button>
                 </div>
 
                 <div className="mt-4 p-4 rounded-md flex flex-col gap-3 border dark:border-white/10 border-black/20 backdrop-blur-lg shadow-lg">
-                    <div className="flex font-normal text-black/80 dark:text-white/80 p-2 px-4 bg-black/3 dark:bg-white/5 rounded-sm backdrop-blur-lg">
+                    {/* Desktop */}
+                    <div className="hidden md:flex font-normal text-black/80 dark:text-white/80 p-2 px-4 bg-black/3 dark:bg-white/5 rounded-sm backdrop-blur-lg">
                         <div className="w-1/2 text-md">Name</div>
                         <div className="w-1/2 text-md">Email</div>
-                        <div className="w-[9%] text-md flex justify-center">Edit</div>
-                        <div className="w-[5%] text-md flex justify-center">Delete</div>
+                        <div className="w-[100px] text-md flex justify-center">Edit</div>
+                        <div className="w-[60px] text-md flex justify-center">Delete</div>
                     </div>
 
-                    {users.map(user => (
-                        <div key={user.id} className="flex font-normal text-black/80 dark:text-white/80 p-2 px-4 hover:bg-black/2 dark:hover:bg-white/2 rounded-sm backdrop-blur-lg cursor-pointer">
-                            <div className="w-1/2">{user.name}</div>
-                            <div className="w-1/2">{user.email}</div>
-                            <div className="w-[9%] flex justify-center">
-                                <img 
-                                    src={EditIcon} 
-                                    className='w-auto h-5 dark:invert opacity-50 hover:opacity-80' 
-                                    onClick={() => {
-                                        setEditOrAddUser(user);
-                                        setErrors({ name: '', email: '' });
-                                    }} 
-                                    alt="edit_icon" 
-                                />
+                    {/* Mobile */}
+                    <div className="md:hidden font-normal text-black/80 dark:text-white/80 p-2 px-4 bg-black/3 dark:bg-white/5 rounded-sm backdrop-blur-lg">
+                        All Users
+                    </div>
+
+                    {/* Desktop */}
+                    <div className="hidden md:block">
+                        {users.map(user => (
+                            <div key={user.id} className="flex font-normal text-black/80 dark:text-white/80 p-2 px-4 hover:bg-black/2 dark:hover:bg-white/2 rounded-sm backdrop-blur-lg cursor-pointer">
+                                <div className="w-1/2">{user.name}</div>
+                                <div className="w-1/2">{user.email}</div>
+                                <div className="w-[100px] flex justify-center">
+                                    <img
+                                        src={EditIcon}
+                                        className='w-auto h-5 dark:invert opacity-50 hover:opacity-80'
+                                        onClick={() => {
+                                            setEditOrAddUser(user);
+                                            setErrors({ name: '', email: '' });
+                                        }}
+                                        alt="edit_icon"
+                                    />
+                                </div>
+                                <div className="w-[60px] flex justify-center">
+                                    <img
+                                        src={DeleteIcon}
+                                        className='w-auto h-5 dark:invert opacity-50 hover:opacity-80'
+                                        onClick={() => setDeleteUserId(user.id)}
+                                        alt="delete_icon"
+                                    />
+                                </div>
                             </div>
-                            <div className="w-[5%] flex justify-center">
-                                <img 
-                                    src={DeleteIcon} 
-                                    className='w-auto h-5 dark:invert opacity-50 hover:opacity-80' 
-                                    onClick={() => setDeleteUserId(user.id)} 
-                                    alt="delete_icon" 
-                                />
+                        ))}
+                    </div>
+
+                    {/* Mobile */}
+                    <div className="md:hidden space-y-3">
+                        {users.map(user => (
+                            <div key={user.id} className="font-normal text-black/80 dark:text-white/80 p-3 hover:bg-black/2 dark:hover:bg-white/2 rounded-sm backdrop-blur-lg cursor-pointer border dark:border-white/10 border-black/20">
+                                <div className="flex justify-between items-center">
+                                    <div>
+                                        <div className="font-medium">{user.name}</div>
+                                        <div className="text-sm opacity-80">{user.email}</div>
+                                    </div>
+                                    <div className="flex gap-3">
+                                        <button
+                                            onClick={() => {
+                                                setEditOrAddUser(user);
+                                                setErrors({ name: '', email: '' });
+                                            }}
+                                            className="opacity-50 hover:opacity-80"
+                                        >
+                                            <img
+                                                src={EditIcon}
+                                                className='w-5 h-5 dark:invert'
+                                                alt="edit_icon"
+                                            />
+                                        </button>
+                                        <button
+                                            onClick={() => setDeleteUserId(user.id)}
+                                            className="opacity-50 hover:opacity-80"
+                                        >
+                                            <img
+                                                src={DeleteIcon}
+                                                className='w-5 h-5 dark:invert'
+                                                alt="delete_icon"
+                                            />
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
 
             {/* Edit/Add Modal */}
             {editOrAddUser && (
                 <div className="fixed inset-0 dark:bg-white/1 bg-black/20 flex justify-center items-center backdrop-blur-[2px]">
-                    <div className="bg-white dark:bg-neutral-900 p-4 rounded-lg min-w-[450px]">
+                    <div className="bg-white dark:bg-neutral-900 p-4 rounded-lg min-w-[90%]  md:min-w-[450px]">
                         <h2 className="text-lg p-2 rounded-xs font-semibold mb-4 bg-black/3 dark:bg-white/3">
                             {isAddingNewUser ? 'Add New User' : 'Edit User'}
                         </h2>
-                        
+
                         <div className="group relative rounded-md border dark:border-white/10 border-black/20 focus-within:border-blue-400 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-blue-300/30 mb-4">
                             <div className="flex justify-between">
                                 <label className="text-xs font-medium text-gray-500 group-focus-within:text-black dark:group-focus-within:text-white">
@@ -182,7 +230,7 @@ export default function Home({ dark, toggleDark }: HomeProps) {
                             />
                             {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
                         </div>
-                        
+
                         <div className="group relative rounded-md border dark:border-white/10 border-black/20 focus-within:border-blue-400 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-blue-300/30 mb-4">
                             <div className="flex justify-between">
                                 <label className="text-xs font-medium text-gray-500 group-focus-within:text-black dark:group-focus-within:text-white">
@@ -212,23 +260,22 @@ export default function Home({ dark, toggleDark }: HomeProps) {
                         </div>
 
                         <div className="flex mt-4 justify-end gap-2">
-                            <button 
+                            <button
                                 onClick={() => {
                                     setEditOrAddUser(null);
                                     setIsAddingNewUser(false);
-                                }} 
+                                }}
                                 className="px-4 py-2 border text-sm border-gray-400/70 cursor-pointer rounded"
                             >
                                 Cancel
                             </button>
-                            <button 
-                                onClick={handleUpdateOrAddUser} 
+                            <button
+                                onClick={handleUpdateOrAddUser}
                                 disabled={!isFormValid()}
-                                className={`px-6 py-2 text-sm text-white cursor-pointer rounded ${
-                                    isFormValid() 
-                                        ? 'bg-green-500 hover:bg-green-600' 
+                                className={`px-6 py-2 text-sm text-white cursor-pointer rounded ${isFormValid()
+                                        ? 'bg-green-500 hover:bg-green-600'
                                         : 'bg-gray-400 cursor-not-allowed'
-                                }`}
+                                    }`}
                             >
                                 {isAddingNewUser ? 'Add' : 'Save'}
                             </button>
