@@ -15,7 +15,7 @@ export default function TopNav({ dark, toggleDark }: TopNavProps) {
 
             <img className='w-auto h-7 object-cover' src={dark ? LogoDark : LogoWhite} alt="logo" />
             <div className='flex items-center'>
-                <button className='bg-violet-500/15 px-4 py-2 rounded-xs text-xs font-medium border border-gray-500/10 cursor-pointer hover:bg-violet-500/20 uppercase'>Logout</button>
+                <button className='bg-yellow-400/75 dark:bg-yellow-400/70 hover:bg-yellow-500/90 text-white  px-4 py-2 rounded-sm text-xs font-bold border border-gray-500/10 cursor-pointer uppercase'>Logout</button>
                 <div onClick={toggleDark} className=" flex justify-end p-2  rounded-md transition cursor-pointer ">
                     <img src={dark ? LightModeIcon : DarkModeIcon} alt="Google" className="w-7 h-7" />
                 </div>

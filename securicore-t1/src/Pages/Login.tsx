@@ -83,7 +83,7 @@ function handlePasswordChange(e: React.ChangeEvent<HTMLInputElement>) {
             </div>
 
             <div className="flex w-full flex-col p-6 items-center">
-              <h3 className="text-2xl font-bold uppercase opacity-80 dark:opacity-90">Login</h3>
+              <h3 className="text-2xl uppercase opacity-80 dark:opacity-90 font-bold">Login</h3>
               <p className="mt-1.5 text-sm font-medium text-gray-500 dark:text-white/60">
                 Welcome back, enter your credentials to continue.
               </p>
