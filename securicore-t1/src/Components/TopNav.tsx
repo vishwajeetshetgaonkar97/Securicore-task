@@ -57,7 +57,7 @@ export default function TopNav({ dark, toggleDark }: TopNavProps) {
     };
 
     return (
-        <div className='p-2 w-full max-w-screen overflow-x-hidden border-b-1 dark:border-white/10 border-black/20 shadow-lg backdrop-blur-lg flex justify-between items-center bg-red-500'>
+        <div className='p-2 w-full max-w-screen overflow-x-hidden border-b-1 dark:border-white/10 border-black/20 shadow-lg backdrop-blur-lg flex justify-between items-center'>
             <img className='w-auto h-7 object-cover' src={dark ? LogoDark : LogoWhite} alt="logo" />
             <div className='flex items-center'>
                 <button 
