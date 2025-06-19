@@ -70,7 +70,7 @@ function handlePasswordChange(e: React.ChangeEvent<HTMLInputElement>) {
       </div>
 
       <div onClick={toggleDark} className="fixed flex justify-end p-2 px-2 py-2 rounded-md transition cursor-pointer top-0 right-0">
-        <img src={dark ? LightModeIcon : DarkModeIcon} alt="Google" className="w-7 h-7" />
+        <img src={dark ? LightModeIcon : DarkModeIcon} alt="Google" className={`w-auto ${dark?"h-7":"h-6"}`} />
        
       </div>
 

@@ -57,7 +57,7 @@ export default function TopNav({ dark, toggleDark }: TopNavProps) {
     };
 
     return (
-        <div className='p-2 border-b-1 dark:border-white/10 border-black/20 shadow-lg backdrop-blur-lg flex justify-between items-center'>
+        <div className='p-2 w-full max-w-screen border-b-1 dark:border-white/10 border-black/20 shadow-lg backdrop-blur-lg flex justify-between items-center'>
             <img className='w-auto h-7 object-cover' src={dark ? LogoDark : LogoWhite} alt="logo" />
             <div className='flex items-center'>
                 <button 
@@ -67,7 +67,7 @@ export default function TopNav({ dark, toggleDark }: TopNavProps) {
                     Logout
                 </button>
                 <div onClick={toggleDark} className="flex justify-end p-2 rounded-md transition cursor-pointer">
-                    <img src={dark ? LightModeIcon : DarkModeIcon} alt="Theme toggle" className="w-7 h-7" />
+                    <img src={dark ? LightModeIcon : DarkModeIcon} alt="Theme toggle" className={`w-auto ${dark?"h-7":"h-6"}`} />
                 </div>
             </div>
 

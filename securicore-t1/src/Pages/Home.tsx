@@ -77,7 +77,6 @@ export default function Home({ dark, toggleDark }: HomeProps) {
     };
 
     const handleAddNewUser = () => {
-          console.log('Button clicked!');
         setEditOrAddUser({ id: 0, name: '', email: '' });
         setIsAddingNewUser(true);
         setErrors({ name: '', email: '' });
