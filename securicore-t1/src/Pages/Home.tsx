@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import TopNav from '../Components/TopNav';
+// import TopNav from '../Components/TopNav';
 import EditIcon from '../assets/editIcon.png'
 import DeleteIcon from '../assets/deleteIcon.png'
 
@@ -9,12 +9,9 @@ interface User {
     email: string;
 }
 
-interface HomeProps {
-    dark: boolean;
-    toggleDark: () => void;
-}
 
-export default function Home({ dark, toggleDark }: HomeProps) {
+
+export default function Home() {
     const [users, setUsers] = useState<User[]>([
         { id: 1, name: 'John Doe', email: 'john@example.com' },
         { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
