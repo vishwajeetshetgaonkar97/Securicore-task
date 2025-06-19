@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import TopNav from '../Components/TopNav';
 import EditIcon from '../assets/editIcon.png'
 import DeleteIcon from '../assets/deleteIcon.png'
@@ -22,6 +22,10 @@ export default function Home({ dark, toggleDark }: HomeProps) {
         { id: 4, name: 'Emily Davis', email: 'emily@example.com' },
         { id: 5, name: 'David Wilson', email: 'david@example.com' },
     ]);
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
 
     const [editOrAddUser, setEditOrAddUser] = useState<User | null>(null);
     const [deleteUserId, setDeleteUserId] = useState<number | null>(null);
