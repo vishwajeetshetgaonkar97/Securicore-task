@@ -23,7 +23,7 @@ function App() {
       <Routes>
     <Route path="/login" element={<Login dark={dark} toggleDark={toggleDark} />} />
         <Route path="/home" element={<Home dark={dark} toggleDark={toggleDark} />} />
-        <Route path="*" element={<Login dark={dark} toggleDark={toggleDark} />} />
+        <Route path="/" element={<Login dark={dark} toggleDark={toggleDark} />} />
       </Routes>
     </Router>
   )
