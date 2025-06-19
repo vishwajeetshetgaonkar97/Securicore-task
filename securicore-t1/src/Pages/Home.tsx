@@ -183,7 +183,6 @@ export default function Home({ dark, toggleDark }: HomeProps) {
                             {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
                         </div>
                         
-                        {/* Email Input */}
                         <div className="group relative rounded-md border dark:border-white/10 border-black/20 focus-within:border-blue-400 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-blue-300/30 mb-4">
                             <div className="flex justify-between">
                                 <label className="text-xs font-medium text-gray-500 group-focus-within:text-black dark:group-focus-within:text-white">

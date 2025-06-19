@@ -8,6 +8,8 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- It was added to prevent CSS mishaps with the logout modal used in the top navigation, which is implemented using React Portals.  -->
+    <div id="modal-root"></div> 
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
