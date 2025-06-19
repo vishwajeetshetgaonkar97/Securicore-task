@@ -242,7 +242,7 @@ nav ul li a:hover {
 
     .hero-image {
         width: auto;
-        height: 45vh;
+        height: 50vh;
     }
 
     .tall-main-image {
@@ -262,10 +262,9 @@ nav ul li a:hover {
     .hero-content {
         flex-direction: column;
     }
-
-    .hero-image {
-        width: 100%;
-    }
+.hero-text {
+    text-align: center;
+}
 
     .hero-text h1 {
         font-size: 3.6rem;
