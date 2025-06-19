@@ -93,7 +93,7 @@ nav ul li a:hover {
     width: 50%;
     height: 100%;
     z-index: 1;
-    background-image: url('../securicore-t2/assets/hive-radar-crop.jpg');
+    background-image: url('assets/hive-radar-crop.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
