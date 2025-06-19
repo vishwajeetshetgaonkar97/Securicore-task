@@ -150,13 +150,12 @@ export default function Home({ dark, toggleDark }: HomeProps) {
             {/* Edit/Add Modal */}
             {editOrAddUser && (
                 <div className="fixed inset-0 dark:bg-white/1 bg-black/20 flex justify-center items-center backdrop-blur-[2px]">
-                    <div className="bg-white dark:bg-neutral-900 p-6 rounded-lg min-w-[350px]">
-                        <h2 className="text-md font-semibold mb-6">
+                    <div className="bg-white dark:bg-neutral-900 p-4 rounded-lg min-w-[450px]">
+                        <h2 className="text-lg p-2 rounded-xs font-semibold mb-4 bg-black/3 dark:bg-white/3">
                             {isAddingNewUser ? 'Add New User' : 'Edit User'}
                         </h2>
                         
-                        {/* Name Input */}
-                        <div className="group relative rounded-lg border focus-within:border-blue-400 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-blue-300/30 mb-4">
+                        <div className="group relative rounded-md border dark:border-white/10 border-black/20 focus-within:border-blue-400 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-blue-300/30 mb-4">
                             <div className="flex justify-between">
                                 <label className="text-xs font-medium text-gray-500 group-focus-within:text-black dark:group-focus-within:text-white">
                                     Name
@@ -185,7 +184,7 @@ export default function Home({ dark, toggleDark }: HomeProps) {
                         </div>
                         
                         {/* Email Input */}
-                        <div className="group relative rounded-lg border focus-within:border-blue-400 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-blue-300/30 mb-4">
+                        <div className="group relative rounded-md border dark:border-white/10 border-black/20 focus-within:border-blue-400 px-3 pb-1.5 pt-2.5 duration-200 focus-within:ring focus-within:ring-blue-300/30 mb-4">
                             <div className="flex justify-between">
                                 <label className="text-xs font-medium text-gray-500 group-focus-within:text-black dark:group-focus-within:text-white">
                                     Email
