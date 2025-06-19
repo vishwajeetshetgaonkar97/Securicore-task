@@ -150,7 +150,7 @@ function handlePasswordChange(e: React.ChangeEvent<HTMLInputElement>) {
                     <input type="checkbox" name="remember" />
                     <span className="text-xs">Remember me</span>
                   </label>
-                  <a className="text-sm font-medium underline" href="/forgot-password">
+                  <a className="text-sm font-medium underline" href="/">
                     Forgot password?
                   </a>
                 </div>
