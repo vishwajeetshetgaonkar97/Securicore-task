@@ -1,46 +1,186 @@
-@import url('https://fonts.googleapis.com/css2?family=Anta&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Anta&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+    }
 
-a {
-    text-decoration: none;
-}
+    a {
+        text-decoration: none;
+    }
 
-body {
+    body {
+        background-color: #e5a90c;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #071425;
+        padding: 0 1rem;
+    }
+
+    ul {
+        display: flex;
+        text-decoration: none;
+        list-style-type: none;
+        gap: 1rem;
+    }
+
+    ul li a {
+        color: rgba(240, 248, 255, 0.861);
+    }
+
+    ul li a:hover {
+        color: rgb(240, 248, 255);
+    }
+
+    .logo {
+        height: 4rem;
+        width: auto;
+    }
+
+    .hero-section {
+        position: relative;
+        width: 100%;
+        min-height: 32rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #071425;
+        overflow: hidden;
+
+    }
+
+    .hero-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        min-height: 32rem;
+        display: flex;
+        max-width: 1900px;
+    }
+
+    .hero-text {
+        width: 100%;
+        z-index: 2;
+        position: relative;
+        padding: 4%;
+    }
+
+    .hero-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        z-index: 1;
+        background-image: url('../securicore-t2/assets/hive-radar-crop.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+    /* Blue text effect */
+    .hero-text h1 {
+        position: relative;
+        display: inline-block;
+        color: #e5a90c;
+        margin-top: 5.5rem;
+    }
+
+    .hero-text h1::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #071425;
+        clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    }
+
+    .hero-text h1 {
+        font-size: 6rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .hero-text h4 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+    }
+
+    .hero-text h6 {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .section-info {
+        background-color: #071425;
+        padding: 4rem 2rem;
+        color: rgba(255, 255, 255, 0.914);
+        font-size: 1.4rem;
+        text-align: center;
+        line-height: 2.4rem;
+    }
+
+
+    section img {
+        height: 320px;
+        width: 400px;
+        object-fit: cover;
+    }
+
+  
+
+    .tall-main-image {
+        float: left;
+        height: 1250px;
+        width: 550px;
+        /* shape-outside: url("../securicore-t2/assets/Full-front.png"); */
+
+        /* shape-outside: polygon(0 0, 0% 0, 100% 100%, 20% 100%);  */
+
+    }
+
+    .section-1, .section-2 {
+        display: flex;
+        background-color: #071425;
+        color: #ddd0bd;
+        margin-top: 1rem;
+    }
+.section-2{
     background-color: #e5a90c;
+    color: #071425;
 }
+    .section-1 div, .section-2 div {
+        padding: 2rem;
+    }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #071425;
-    padding: 0 1rem;
-}
+    .section-1 h4, .section-2 h4 {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
 
-ul {
-    display: flex;
-    text-decoration: none;
-    list-style-type: none;
-    gap: 1rem;
-}
+    .section-1 p, .section-2 p {
+        padding-top: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
 
-ul li a{
-    color: rgba(240, 248, 255, 0.861);
-}
-
-ul li a:hover{
-    color: rgb(240, 248, 255);
-}
-
-.logo {
-    height: 4rem;
-    width: auto;
-}
-
-
+    .section-1 img , .section-2 img{
+        height: 250px;
+        width: 300px;
+        object-fit: cover;
+    }

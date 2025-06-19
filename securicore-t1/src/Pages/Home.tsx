@@ -94,7 +94,7 @@ export default function Home({ dark, toggleDark }: HomeProps) {
     };
 
     return (
-        <div className='min-h-screen w-full overflow-x-hidden bg-white text-black dark:bg-neutral-950 dark:text-white transition transition-colors duration-300'>
+        <div className='min-h-screen w-full  overflow-x-hidden bg-white text-black dark:bg-neutral-950 dark:text-white transition transition-colors duration-300'>
             <TopNav dark={dark} toggleDark={toggleDark} />
 
             <div className="relative  h-full w-full bg-slate-950 opacity-0 dark:opacity-100">
