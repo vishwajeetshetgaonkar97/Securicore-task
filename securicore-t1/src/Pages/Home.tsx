@@ -94,7 +94,7 @@ export default function Home({ dark, toggleDark }: HomeProps) {
     };
 
     return (
-        <div className='min-h-screen w-full overflow-x-clip bg-white text-black dark:bg-neutral-950 dark:text-white transition-colors duration-300'>
+        <div className='min-h-screen w-screen overflow-x-clip bg-white text-black dark:bg-neutral-950 dark:text-white transition-colors duration-300'>
             <TopNav dark={dark} toggleDark={toggleDark} />
 
             <div className="relative h-full w-screen bg-slate-950 opacity-0 dark:opacity-100">
@@ -102,7 +102,7 @@ export default function Home({ dark, toggleDark }: HomeProps) {
                 <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
             </div>
 
-            <div className="p-8">
+            <div className="p-4 md:p-8">
                 <div className='flex  justify-between items-end gap-2 sm:gap-0 flex-col sm:flex-row'>
                     <div className='w-full'>
                         <h3 className="text-2xl font-bold uppercase opacity-80 dark:opacity-90">Welcome!</h3>
