@@ -97,7 +97,7 @@ export default function Home({ dark, toggleDark }: HomeProps) {
         <div className='min-h-screen w-screen overflow-x-clip bg-white text-black dark:bg-neutral-950 dark:text-white transition-colors duration-300'>
             <TopNav dark={dark} toggleDark={toggleDark} />
 
-            <div className="relative hidden h-full w-full bg-slate-950 opacity-0 dark:opacity-100">
+            <div className="relative h-full w-full bg-slate-950 opacity-0 dark:opacity-100">
                 <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
                 <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
             </div>
@@ -115,7 +115,7 @@ export default function Home({ dark, toggleDark }: HomeProps) {
                     </button>
                 </div>
 
-                <div className="mt-4 p-4 rounded-md flex flex-col gap-3 border dark:border-white/10 border-black/20 backdrop-blur-lg shadow-lg">
+                <div className="mt-4 hidden p-4 rounded-md flex flex-col gap-3 border dark:border-white/10 border-black/20 backdrop-blur-lg shadow-lg">
                     {/* Desktop */}
                     <div className="hidden md:flex font-normal text-black/80 dark:text-white/80 p-2 px-4 bg-black/3 dark:bg-white/5 rounded-sm backdrop-blur-lg">
                         <div className="w-1/2 text-md">Name</div>
