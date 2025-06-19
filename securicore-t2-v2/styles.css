@@ -249,9 +249,10 @@ nav ul li a:hover {
         position: absolute;
         opacity: 0.3;
     }
-.features-info-section > section:nth-of-type(5) {
-    flex-direction: column;
-}
+
+    .features-info-section>section:nth-of-type(5) {
+        flex-direction: column;
+    }
 
 
 }
@@ -262,9 +263,10 @@ nav ul li a:hover {
     .hero-content {
         flex-direction: column;
     }
-.hero-text {
-    text-align: center;
-}
+
+    .hero-text {
+        text-align: center;
+    }
 
     .hero-text h1 {
         font-size: 3.6rem;
@@ -291,9 +293,9 @@ nav ul li a:hover {
         background-color: #e5a90c;
     }
 
-    .features-section> section:nth-of-type(2),
-    .features-section> section:nth-of-type(6),
-    .features-section> section:nth-of-type(5) {
+    .features-section>section:nth-of-type(2),
+    .features-section>section:nth-of-type(6),
+    .features-section>section:nth-of-type(5) {
         margin-left: 1rem;
     }
 
@@ -333,6 +335,12 @@ nav ul li a:hover {
         opacity: 0.9;
     }
 
+        .hero-image {
+        width: 90vw;
+        height: auto;
+        margin-top: 2vh;
+    }
+
     .section-1,
     .section-2 {
         flex-direction: column-reverse;
@@ -344,10 +352,10 @@ nav ul li a:hover {
         margin-top: 2rem;
     }
 
-   .features-info-section > section:nth-of-type(4),
-.features-info-section > section:nth-of-type(5) {
-    flex-direction: column;
-}
+    .features-info-section>section:nth-of-type(4),
+    .features-info-section>section:nth-of-type(5) {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 550px) {
@@ -401,5 +409,5 @@ nav ul li a:hover {
         margin-top: 0.5rem;
         height: 200px;
     }
-    
+
 }
