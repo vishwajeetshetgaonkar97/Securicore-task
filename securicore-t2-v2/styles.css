@@ -249,7 +249,9 @@ nav ul li a:hover {
         position: absolute;
         opacity: 0.3;
     }
-
+.features-info-section > section:nth-of-type(5) {
+    flex-direction: column;
+}
 
 
 }
@@ -290,9 +292,9 @@ nav ul li a:hover {
         background-color: #e5a90c;
     }
 
-    .features-section>.section-2:nth-of-type(2),
-    .features-section>.section-2:nth-of-type(6),
-    .features-section>.section-1:nth-of-type(5) {
+    .features-section> section:nth-of-type(2),
+    .features-section> section:nth-of-type(6),
+    .features-section> section:nth-of-type(5) {
         margin-left: 1rem;
     }
 
@@ -343,10 +345,10 @@ nav ul li a:hover {
         margin-top: 2rem;
     }
 
-    .features-section>.section-2:nth-of-type(4),
-    .features-section>.section-1:nth-of-type(5) {
-        flex-direction: column;
-    }
+   .features-info-section > section:nth-of-type(4),
+.features-info-section > section:nth-of-type(5) {
+    flex-direction: column;
+}
 }
 
 @media (max-width: 550px) {
@@ -399,6 +401,6 @@ nav ul li a:hover {
     .section-2 img {
         margin-top: 0.5rem;
         height: 200px;
-
     }
+    
 }
