@@ -28,7 +28,7 @@ nav {
     display: none;
 }
 
-.burger-menu-image{
+.burger-menu-image {
     display: none;
 }
 
@@ -211,7 +211,7 @@ nav ul li a:hover {
 .section-1 img,
 .section-2 img {
     height: 250px;
-    width: 300px;
+    width: auto;
     object-fit: cover;
 }
 
@@ -270,6 +270,8 @@ nav ul li a:hover {
     .features-section>.section-1:nth-of-type(5) {
         margin-left: 1rem;
     }
+
+  
 }
 
 @media (max-width: 660px) {
@@ -281,9 +283,9 @@ nav ul li a:hover {
         display: none;
     }
 
-    .burger-menu-image{
-    display: block;
-}
+    .burger-menu-image {
+        display: block;
+    }
 
     #burger-toggle:checked~ul {
         display: flex;
@@ -366,5 +368,12 @@ nav ul li a:hover {
     .section-2 p {
         font-size: 1rem;
         line-height: 1.8rem;
+    }
+
+    .section-1 img,
+    .section-2 img {
+        margin-top: 0.5rem;
+        height: 200px;
+
     }
 }
