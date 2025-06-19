@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #e5a90c;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #071425;
+    padding: 0 1rem;
+}
+
+ul {
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+ul li a{
+    color: rgba(240, 248, 255, 0.861);
+}
+
+ul li a:hover{
+    color: rgb(240, 248, 255);
+}
+
+.logo {
+    height: 4rem;
+    width: auto;
+}
+
+
