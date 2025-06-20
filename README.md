@@ -1,9 +1,6 @@
 ## Project Demo (Video Walkthrough)
 [https://youtu.be/ZAQNw-uAoEo](https://youtu.be/ZAQNw-uAoEo)
 
-## GitHub Repository (Complete Code)
-[https://github.com/vishwajeetshetgaonkar97/Securicore-task](https://github.com/vishwajeetshetgaonkar97/Securicore-task)
-
 ## Deployed Projects on Vercel
 
 ### Task 1
