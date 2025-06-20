@@ -84,6 +84,7 @@ nav ul li a:hover {
     justify-content: center;
     color: #071425;
     overflow: hidden;
+    background-color: #0ce525;
 }
 
 .hero-content {
@@ -96,6 +97,7 @@ nav ul li a:hover {
     align-items: center;
     padding: 4vh;
     margin-top: 8vh;
+    background-color: aqua;
 }
 
 .hero-text {
