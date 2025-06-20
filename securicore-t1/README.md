@@ -5,7 +5,7 @@
 1. Clone the repository:
    ```
    git clone <repository-url>
-   cd <project-folder>
+   
 2. Install dependencies:
     ```
     npm i
