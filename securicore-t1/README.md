@@ -1,5 +1,8 @@
 # Securicore-task-1
 
+You can check the live project here:
+https://securicore-task-1.vercel.app/
+
 ### Installation
 
 1. Clone the repository:
